@@ -148,4 +148,91 @@ nav{
 .skill-box img{
     height: 100%;
 }
+#projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 40px;
+    gap: 50px;
+}
+#projects h1{
+    color: var(---primary-color);
+    font-size: 4rem;
+    text-align: center;
+}
+.projects-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+.project-box{
+    padding: 20px;
+    border: 2px solid var(---primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all ease 0.5s;
+    gap: 1rem;
+}
+.project-box:hover{
+    box-shadow: 0px 0px 15px var(---primary-color);
+}
+.project-box h3{
+    font-size: 2rem;
+}
+.project-box img{
+    height: 250px;
+    border-radius: 50%;
+    width: 250px;
+    object-fit: cover;
+}
+.project-box a{
+    text-decoration: none;
+    color: var(---light-color);
+    cursor: pointer;
+}
+#watchme{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-block:40px ;
+}
+#watchme h1{
+    color: var(---primary-color);
+    font-size: 4rem;
+    text-align: center;
+}
+.icons-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: 100px;
+    width: 100px;
+    background: var(---primary-color);
+    transition: 0.5s all ease;
+}
+.icon-box:hover{
+    background: var(---dark-color);
+    border: 2px solid var(---primary-color);
+}
+.icon-box:hover a{
+    color: var(---primary-color);
+}
+.icon-box a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(---dark-color);
+}
 }

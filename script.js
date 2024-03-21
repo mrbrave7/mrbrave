@@ -14,7 +14,7 @@ themeChanger.addEventListener('click', (e) => {
     }
 })
 var typed = new Typed('.primary', {
-    strings: ['Freelancer', 'Web Designer','Web Developer'],
+    strings: ['Freelancer', 'Web Designer','Web Developer','Influencer'],
     typeSpeed: 100,
     smartBackspace: true,
     backDelay: 700,

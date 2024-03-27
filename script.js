@@ -1,4 +1,5 @@
 const root = document.documentElement;
+const logo = document.querySelector(".logo-image")
 const themeChanger = document.querySelector('.theme-changer');
 themeChanger.addEventListener('click', (e) => {
     console.log(e.target.name)
@@ -6,11 +7,13 @@ themeChanger.addEventListener('click', (e) => {
         root.style.setProperty('---dark-color', '#f1f1f1');
         root.style.setProperty('---light-color', '#191919');
         e.target.name = 'moon-outline'
+        logo.setAttribute('src',"./Assets/Light.png")
     }
     else {
         root.style.setProperty('---dark-color', '#191919');
         root.style.setProperty('---light-color', '#f1f1f1');
         e.target.name = 'sunny-outline'
+        logo.setAttribute('src',"./Assets/Dark.png")
     }
 })
 var typed = new Typed('.primary', {

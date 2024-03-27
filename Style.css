@@ -52,9 +52,9 @@
             -ms-flex-pack: justify;
                 justify-content: space-between;
     }
-    .logo h1{
-        font-size:2rem;
-        color: var(---light-color);
+    .logo img{
+        height: 70px;
+        width: 70px;
     }
     .navigations{
         position: static;
@@ -285,7 +285,7 @@
             -ms-transform: translateY(-4px);
                 transform: translateY(-4px);
     }
-    .project-box:hover h3{
+    .project-box:hover h1{
         color: var(---primary-color);
     }
     .project-box h3{

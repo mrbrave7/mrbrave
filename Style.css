@@ -16,9 +16,7 @@
         text-decoration: none;
         font-size: 1.2rem;
     }
-    .e{
-        color: var(---primary-color);
-    }
+    
     body{
         padding-inline: 120px;
         min-height: 100vh;

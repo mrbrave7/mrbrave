@@ -1,58 +1,354 @@
-:root{
-    ---primary-color:#ff0000;
-    ---dark-color:#191919;
-    ---light-color:#f1f1f1;
+@media (min-width: 1281px) {
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-family: "Gaegu", sans-serif;
+    }
+    :root{
+        ---primary-color:#ff0000;
+        ---dark-color:#191919;
+        ---light-color:#f1f1f1;
+        
+    }
+    a{
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
     
+    body{
+        padding-inline: 120px;
+        min-height: 100vh;
+        width: 100vw;
+        background: var(---dark-color);
+        color: var(---light-color);
+        -webkit-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+    }
+    header{
+        padding-block: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 60px;
+    }
+    nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+    }
+    .navigations{
+        position: static;
+    }
+    .menu{
+        display: none;
+    }
+    .navitems{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        list-style: none;
+        gap: 15px;
+    }
+    .navitems li{
+        padding: 4px 15px;
+    }
+    .navitems li a{
+        color: var(---light-color);
+        -webkit-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+    }
+    .navitems li a:hover{
+        color: var(---primary-color);
+    }
+    .theme-changer{
+        color: var(---light-color);
+        border: 2px solid var(---light-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+    .projects{
+        height: 100%;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 1rem;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .project-card{
+        position: relative;
+        height: 350px;
+        border-radius: 8px;
+        width: 350px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-shadow: 0px 0px 8px var(---light-color);
+                box-shadow: 0px 0px 8px var(---light-color);
+        overflow: hidden;
+    }
+    .project-card img{
+        height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+    .project-card h1{
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        color: var(---primary-color);
+    }
+    .project-card .buttons{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        padding: 8px 16px ;
+        border-radius: 8px;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 90%;
+    }
+    .buttons a{
+        padding: 6px 12px ;
+        text-decoration: none;
+        border-radius: 8px;
+        color: var(---light-color);
+        background: var(---dark-color);
+    } 
 }
+@media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-family: "Gaegu", sans-serif;
+    }
 
-.projects{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-.project-card{
-    position: relative;
-    height: 350px;
-    border-radius: 8px;
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 8px var(---light-color);
-    overflow: hidden;
-}
-.project-card img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.project-card h1{
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(---primary-color);
-}
-.project-card .buttons{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    padding: 8px 16px ;
-    border-radius: 8px;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-.buttons a{
-    padding: 6px 12px ;
-    text-decoration: none;
-    border-radius: 8px;
-    color: var(---light-color);
-    background: var(---dark-color);
+    :root {
+        ---primary-color: #ff0000;
+        ---dark-color: #191919;
+        ---light-color: #f1f1f1;
+
+    }
+
+    body {
+        background: var(---dark-color);
+        padding-inline: 40px;
+        -webkit-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    header {
+        padding-block: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .navigations {
+        position: absolute;
+        top: -100%;
+        left: 0%;
+        padding: 40px;
+        background: var(---dark-color);
+        height: 100%;
+        width: 100%;
+        -webkit-transition: all ease 0.7s;
+        -o-transition: all ease 0.7s;
+        transition: all ease 0.7s;
+    }
+
+    .menu {
+        font-size: 1.3rem;
+        border-radius: 8px;
+        border: 1px solid var(---light-color);
+        color: var(---light-color);
+        padding: 8px;
+    }
+
+    .navigations .navitems {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .navitems li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: var(---light-color);
+        -webkit-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+    }
+
+    .navitems li a:hover {
+        color: var(---primary-color);
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .navitems {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .theme-changer {
+        color: var(---light-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 8px;
+        font-size: 1.3rem;
+        border-radius: 8px;
+        border: 1px solid var(---light-color);
+    }
+    .projects{
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .project-card{
+        height: 300px;
+        width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+    .project-card img{
+        height: 100%;
+        width: 300px;
+    }
+    .project-card h1{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        color: var(---light-color);
+        text-shadow: 0px 0px 4px var(---primary-color);
+        transform: translateX(-50%);
+        font-size: 1rem;
+    }
+    .project-card .buttons{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-50%);
+        width: 100%;
+        
+    }
+    .buttons a{
+        padding: 6px 12px;
+        width: 100px;
+        background: var(---dark-color);
+        color: var(---light-color);
+        text-decoration: none;
+        text-align: center;
+        border-radius: 4px;
+    }
+
 }

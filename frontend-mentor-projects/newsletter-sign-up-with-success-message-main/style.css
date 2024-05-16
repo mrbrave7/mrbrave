@@ -64,7 +64,21 @@ body{
 .container .left .input{
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 5px;
+}
+.container .left .input p{
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    right: 5px;
+    color: var(--Tomato3);
+    font-weight: 600;
+    text-decoration: solid;
+}
+.container .left .input p.show-mgs{
+    opacity: 1;
 }
  .input label{
     font-size: 12px;
@@ -74,7 +88,13 @@ body{
     width:348px;
     border-radius: 8px;
     outline: none;
+    
+}
+.container .left input.valid{
     border: 2px solid var(--Grey);
+}
+.container .left input.invalid{
+    border: 2px solid var(--Tomato3);
 }
 .container .right img{
     width: 300px;

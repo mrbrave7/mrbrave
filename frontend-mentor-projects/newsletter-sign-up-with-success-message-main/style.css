@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+
+}
+
+:root {
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato3:rgb(255, 87, 87);
+    --Tomato2: hsl(22, 100%, 67%);
+}
+li{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 20px;
+    font-size: 14px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+body{
+    background: var(--Charcoal-Grey);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: 750px;
+    height:520px;
+    align-items: center;
+    /* flex-wrap: wrap-reverse; */
+    justify-content: center;
+    background: #fff;
+    gap: 30px;
+    border-radius: 18px;
+    padding: 40px;
+}
+.container .left h1{
+    font-size: 3rem;
+}
+.container .left {
+    display: flex;
+    height: 400px;
+    width: 450px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+}
+.container .left p{
+    font-size: 14px;
+}
+.container .left .input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ .input label{
+    font-size: 12px;
+}
+.container .left input{
+    padding: 16px;
+    width:348px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid var(--Grey);
+}
+.container .right img{
+    width: 300px;
+}
+.success-container{
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    width: 420px;
+    gap: 30px;
+    border-radius: 15px;
+    background: var(--White);
+    padding: 40px;
+}
+.success-container img{
+    height: 60px;
+}
+.success-container h1{
+    font-size: 3rem;
+    color: var(--Charcoal-Grey);
+}
+.success-container p{
+    font-size: 15px;
+}
+button{
+    background: var(--Dark-Slate-Grey);
+    color: var(--White);
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(30deg,var(--Tomato3), var(--Tomato2));
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Challenges.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b25cdf0deb.js" crossorigin="anonymous" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./Assets/Dark.png" class="logo-image" alt="">
+            </div>
+            <div class="theme-changer">
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1>My Random Projects</h1>
+        <div class="projects">
+            <div class="project-card">
+                <h1>Gallery Finder</h1>
+                <img src="./Random Projects/gallery-selector/screenshot--2024.05.16-19_06_09.png" alt="img">
+                <div class="buttons">
+                    <a href="#">Get Code</a>
+                    <a href="./Random Projects/gallery-selector/index.html">View Page</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h1>Neumorphism Calculator</h1>
+                <img src="./Random Projects/neumorphism-calculator/screenshot--2024.05.16-19_12_41.png" alt="">
+                <div class="buttons">
+                    <a href="#">Get Code</a>
+                    <a href="./Random Projects//neumorphism-calculator/index.html">View Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const root = document.documentElement;
+        const logo = document.querySelector(".logo-image")
+        const themeChanger = document.querySelector('.theme-changer');
+        themeChanger.addEventListener('click', (e) => {
+            console.log(e.target.name)
+            if (e.target.name === "sunny-outline") {
+                root.style.setProperty('---dark-color', '#f1f1f1');
+                root.style.setProperty('---light-color', '#191919');
+                e.target.name = 'moon-outline'
+                logo.setAttribute('src', "./Assets/Light.png")
+            }
+            else {
+                root.style.setProperty('---dark-color', '#191919');
+                root.style.setProperty('---light-color', '#f1f1f1');
+                e.target.name = 'sunny-outline'
+                logo.setAttribute('src', "./Assets/Dark.png")
+            }
+        })
+    </script>
+</body>
+
+</html>

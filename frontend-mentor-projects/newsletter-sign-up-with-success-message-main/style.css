@@ -40,11 +40,12 @@ body{
     width: 750px;
     height:520px;
     align-items: center;
-    /* flex-wrap: wrap-reverse; */
+    /* flex-wrap: initial; */
     justify-content: center;
     background: #fff;
     gap: 30px;
     border-radius: 18px;
+
     padding: 40px;
 }
 .container .left h1{

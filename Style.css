@@ -16,9 +16,11 @@
         text-decoration: none;
         font-size: 1.2rem;
     }
-    
-    body{
+    section{
         padding-inline: 120px;
+    }
+    body{
+        
         min-height: 100vh;
         width: 100vw;
         background: var(---dark-color);
@@ -43,6 +45,7 @@
         display: -ms-flexbox;
         display: flex;
         width: 100%;
+        padding-inline: 120px;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -238,6 +241,7 @@
     #projects h1{
         text-align: center;
         font-size: 3rem;
+        padding: 40px;
         color: var(---light-color);
     }
     .projects-container{
@@ -403,7 +407,7 @@
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        gap: 40px;
+        gap: 20px;
         padding-block: 40px;
     }
     #contact h1{
@@ -477,10 +481,105 @@
     .contact-detail p{
         font-size: 1.5rem;
     }
+    .send-messages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 4rem;
+    }
+    .send-messages h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .send-messages form {
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80%;
+    }
+    .send-messages form .form__group{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .send-messages form .field-box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    
+    .send-messages form .field-box label {
+        background: var(---dark-color);
+        color: var(---light-color); 
+        padding: 5px;
+        font-size: 1.4rem; 
+        pointer-events: none;
+    }
+    
+    .send-messages form .field-box input {
+        background: transparent;
+        border: 2px solid var(---light-color);
+        padding: 10px;
+        width: 100%;
+        height: 60px;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        font-size: 1.5rem;
+        outline: none;
+        color: var(---light-color);
+    }
+    
+    .send-messages form .field-box input:focus {
+        border-color: var(---primary-color); 
+        color: var(---primary-color);
+    }
+    .send-messages form .message{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .send-messages form textarea{
+        background: transparent;
+        height: 200px;
+        outline: none;
+        border-radius: 8px;
+        padding: 20px;
+        color: var(---primary-color);
+        width: 100%;
+    }
+    .send-messages form textarea:focus{
+        border: 2px solid var(---primary-color);
+    }
+    .send-messages form button{
+        width: 100%;
+        background: var(---primary-color);
+        color: var(---light-color);
+        height: 60px;
+        font-size: 2rem;
+        border: 2px solid var(---dark-color);
+        border-radius: 8px;
+        transition: all ease 0.7s;
+    }
+    .send-messages form button:hover{
+        background: transparent;
+        color: var(---primary-color);
+        border-color: var(---primary-color);
+    }
     footer{
-        padding-block: 40px;
+        padding-inline: 120px;
+        background: var(---light-color);
         display: -webkit-box;
+        color: var(---dark-color);
         display: -ms-flexbox;
+        padding-block: 2rem;
         display: flex;
         -webkit-box-align: center;
             -ms-flex-align: center;
